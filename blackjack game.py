@@ -1,4 +1,6 @@
 import random
+
+from art import blackjack_logo
 from art_for_blackjack import logo
 def deal_cards():
     # RETURNS A RANDOM CARD FROM THE DECK
@@ -31,7 +33,7 @@ def compare(u_score, c_score):
         return "You lose"
 
 def play_game():
-    print(logo)
+    print(blackjack_logo )
     user_cards = []
     computer_cards = []
     computer_score = -1

@@ -20,7 +20,7 @@ operations = {
 }
 
 def calculator():
-    print(art.logo)
+    print(art.calculator_logo)
     should_accumulate = True
     num1 = float(input("What is the first number?:"))
 
