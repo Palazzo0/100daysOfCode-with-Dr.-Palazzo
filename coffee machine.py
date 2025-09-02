@@ -81,18 +81,19 @@ def current_resources():
     return f"Current Resources: \nWater: {water_resource}ml \nMilk: {milk_resource}ml \nCoffee: {coffee_resource}g \nMoney: ${profit}"
 
 
-# TODO 4:Check the user’s input to decide what to do next and the prompt should show every time action has completed.
+
 user_choice_in_progress = True
 while user_choice_in_progress:
     user_choice =input("What would you like? (espresso/latte/cappuccino). Check the top for the cost of each:").lower()
-    if user_choice == "espresso" or user_choice == "latte" or user_choice == "cappuccino":
-        check_sufficiency(user_choice)
+
 # TODO 5: Print Report - a report should be generated that shows  the current resource values.
-    elif user_choice == "report":
+    if user_choice == "report":
         print(current_resources())
 
 # TODO 6: Turn your machine off when the user input says "off"
     elif user_choice =="off":
         print("Shutting down complete!")
         user_choice_in_progress = False
-
+    # TODO 4:Check the user’s input to decide what to do next and the prompt should show every time action has completed.
+    else:
+        check_sufficiency(user_choice)
